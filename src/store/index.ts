@@ -1,27 +1,13 @@
+
 import { createStore } from 'vuex'
-
-const defaultState = {
-  count: 0
-}
-
-// Create a new store instance.
+import user from './modules/user' 
 export default createStore({
-  state() {
-    return defaultState
+  modules: { 
+    user: user
   },
-  mutations: {
-    increment(state: typeof defaultState) {
-      state.count++
-    }
-  },
-  actions: {
-    increment(context) {
-      context.commit('increment')
-    }
-  },
-  getters: {
-    double(state: typeof defaultState) {
-      return 2 * state.count
-    }
-  }
+//   // 以下属于根节点的
+//   state: {},
+//   mutations: {},
+//   actions: {},
+//   getters: {}
 })
