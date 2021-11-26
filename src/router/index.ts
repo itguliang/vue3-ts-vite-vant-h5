@@ -4,6 +4,7 @@ import {
     RouteRecordRaw
 } from 'vue-router'
 import Home from '@/views/home.vue'
+import User from '@/views/user.vue'
 import Login from '@/views/login.vue'
 
 const routes: Array<RouteRecordRaw> = [
@@ -15,6 +16,11 @@ const routes: Array<RouteRecordRaw> = [
         path: '/home',
         name: 'home',
         component: Home
+    },
+    {
+        path: '/user',
+        name: 'user',
+        component: User
     },
     {
         path: '/login',
