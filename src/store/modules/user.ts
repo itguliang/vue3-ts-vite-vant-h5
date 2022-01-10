@@ -6,7 +6,7 @@ export interface UserState {
 
 const state = () => ({
 	name: 'yuyu',
-	detail: Object,
+	detail: null,
 })
 
 const getters = {}
@@ -22,23 +22,15 @@ const mutations = {
 
 const actions = {
 	async GetUserInfo(store: Store<UserState>) {
-		const userInfo: any = await getUserInfo()
-		if (userInfo) {
-			store.commit('SET_DETAIL', userInfo)
+		const response = await getUserInfo()
+		console.log(response)
+		if (response) {
+			store.commit('SET_DETAIL', response.data)
 		}
 	},
 	updateName(store: Store<UserState>) {
 		store.commit('SET_NAME', '90909090')
 	}
-	// LogOut({ commit }) {
-	// 	return new Promise(resolve => {
-	// 		console.log('登出...')
-	// 		commit('SET_TOKEN', '')
-	// 		commit('SET_NAME', '')
-	// 		commit('SET_AVATAR', '')
-	// 		resolve(1)
-	// 	})
-	// }
 }
 
 export default {

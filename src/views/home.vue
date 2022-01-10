@@ -8,6 +8,8 @@
   <div>这是home信息-{{ store.state.home.info }}</div>
   <div>这是user信息-{{ store.state.user.name }}</div>
   <Button type="primary" @click="updateName">axios 调用接口信息</Button>
+  <div>{{ store.state.user.detail }}</div>
+
 </template>
 
 <script setup lang="ts">
