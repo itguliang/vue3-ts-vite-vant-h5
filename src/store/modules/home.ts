@@ -26,15 +26,6 @@ const actions = {
 	updateName(store: Store<UserState>) {
 		store.commit('SET_NAME', '90909090')
 	}
-	// LogOut({ commit }) {
-	// 	return new Promise(resolve => {
-	// 		console.log('登出...')
-	// 		commit('SET_TOKEN', '')
-	// 		commit('SET_NAME', '')
-	// 		commit('SET_AVATAR', '')
-	// 		resolve(1)
-	// 	})
-	// }
 }
 
 export default {

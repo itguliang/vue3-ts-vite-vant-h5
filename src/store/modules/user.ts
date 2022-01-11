@@ -1,20 +1,16 @@
 import { getUserInfo } from '@/api/user'
 import { Store } from 'vuex';
 export interface UserState {
-	name: string,
+	detail: object,
 }
 
 const state = () => ({
-	name: 'yuyu',
 	detail: null,
 })
 
 const getters = {}
 
 const mutations = {
-	SET_NAME(state: any, name: string) {
-		state.name = name
-	},
 	SET_DETAIL(state: any, detail: string) {
 		state.detail = detail
 	},
@@ -28,9 +24,6 @@ const actions = {
 			store.commit('SET_DETAIL', response.data)
 		}
 	},
-	updateName(store: Store<UserState>) {
-		store.commit('SET_NAME', '90909090')
-	}
 }
 
 export default {
