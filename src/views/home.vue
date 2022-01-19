@@ -25,7 +25,7 @@
     <GridItem icon="fire-o" text="导航5" />
     <GridItem icon="fire-o" text="导航6" />
     <GridItem icon="fire-o" text="导航7" />
-    <GridItem icon="fire-o" text="更多---" />
+    <GridItem icon="fire-o" text="测试---" />
   </Grid>
 </template>
 
