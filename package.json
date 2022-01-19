@@ -1,6 +1,7 @@
 {
   "name": "vue3-ts-vite-vant-h5",
   "version": "0.0.0",
+  "homepage": "https://itguliang.github.io/vue3-ts-vite-vant-h5",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",

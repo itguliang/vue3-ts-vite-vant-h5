@@ -3,6 +3,8 @@ name: deploy
 on:
   push:
     branches: [master] # master 分支有 push 时触发
+    paths-ignore:   # 下列文件的变更不触发部署，可以自行添加
+      - README.md
 
 jobs:
   deploy:
@@ -10,18 +12,17 @@ jobs:
     steps:
 
       # 下载源码
+      # 这一步就是检出你的仓库并下载里面的代码到runner中,actions/checkout@v2是官方自己造的轮子，直接拿来用就行
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2
 
       # 打包构建
       - name: Build
         uses: actions/setup-node@master
         with:
-          node-version: '14.x'
+          node-version: '16.x'
       - run: npm install # 安装依赖
       - run: npm run build # 打包
-      # - run: tar -zcvf release.tgz .nuxt static nuxt.config.js package.json package-lock.json pm2.config.json
-      
 
       # 部署到 GitHub pages
       - name: Deploy
