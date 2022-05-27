@@ -3,8 +3,8 @@ import {
     createWebHashHistory,
     RouteRecordRaw
 } from 'vue-router'
-import Home from '@/views/home.vue'
-import User from '@/views/user.vue'
+import Home from '@/views/tab-view/home.vue'
+import User from '@/views/tab-view/user.vue'
 import Login from '@/views/login.vue'
 
 const routes: Array<RouteRecordRaw> = [
